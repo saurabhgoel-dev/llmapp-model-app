@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: model-app-deployment
+  labels:
+    app: model-app 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: model-app
+  template:
+    metadata:
+      labels:
+        app: model-app
+    spec:
+      containers:
+      - name: model-app
+        image: saurabh1354/llm_bert_app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
