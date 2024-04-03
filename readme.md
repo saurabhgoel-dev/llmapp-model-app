@@ -26,7 +26,7 @@ Developing an app to categorise the sentences into POSITIVE and NEGATIVE. The ap
 
 I have leveraged a relatively small model [A finetuned version of DistilBert](https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english).
 
-### 2. Develop a function to pass senetence and extract an output
+### 2. Develop a function to pass sentence and extract an output
 
 ### 3. Develop a REST API with a POST endpoint
 
