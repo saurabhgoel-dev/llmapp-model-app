@@ -17,3 +17,25 @@ The focus of current version is to develop a blueprint that can be leveraged in 
 3. Create a Docker Image of this REST API and push the image to the Docker Hub.
 4. Develop Config Files to deploy the image on Kubernetes.
 5. Create a project, GKE Cluster in Google Cloud and deploy the config files
+
+## Development
+
+Developing an app to categorise the sentences into POSITIVE and NEGATIVE. The app would take sentences as inputs from the users and out put the sentiments.
+
+### 1. Save the Model on Local 
+
+I have leveraged a relatively small model [A finetuned version of DistilBert](https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english).
+
+### 2. Develop a function to pass senetence and extract an output
+
+### 3. Develop a REST API with a POST endpoint
+
+## Deployment
+
+### 1. Create a Dockerfile and a Docker Image
+
+### 2. Create a Kubernetes Cluster
+
+### 3. Create Deployment and Services config files
+
+### 4. Apply config files
