@@ -5,7 +5,7 @@ metadata:
   labels:
     app: model-app 
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: model-app
@@ -16,7 +16,14 @@ spec:
     spec:
       containers:
       - name: model-app
-        image: saurabh1354/llm_bert_app:latest
+        image: saurabh1354/llm_bert_app:v5
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
+        volumeMounts:
+        - name: model-container-pvc
+          mountPath: /code/models
+      volumes:
+      - name: model-container-pvc
+        persistentVolumeClaim:
+          claimName: model-nfs-pvc

@@ -1,6 +1,6 @@
 from transformers import pipeline
 
-path = "./DistilBert"
+path = "./models/DistilBert"
 
 sentiment_pipeline = pipeline(task = "sentiment-analysis", model = path)
 
