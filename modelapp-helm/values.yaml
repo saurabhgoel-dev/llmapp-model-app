@@ -1,0 +1,27 @@
+deploymentName: model-app-deployment
+
+appName: model-app
+
+nodes:
+  replicas: 1
+
+container:
+  image: saurabh1354/llm_bert_app:v5
+  port: 3000
+  mountPath: /code/models
+  pvcName: model-container-pvc
+
+volume:
+  serverName: model-nfs-server
+  externalIP: 34.122.6.243
+  path: /share
+  storage: 64Gi
+
+volumeClaim: 
+  name: model-nfs-pvc
+  storage: 30Gi
+
+service:
+  name: model-app-service
+  type: LoadBalancer
+  port: 80
